@@ -5,7 +5,7 @@ export const getDocument = async (id) =>{
 
     const document = await Document.findById(id);
 
-    if(document) return Document;
+    if(document) return document;
 
     return await Document.create({_id:id,data:""});
 }
